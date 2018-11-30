@@ -25,18 +25,29 @@
 			}
 		</style>
 		<div class="mdl-card__supporting-text">
-			<p>What did Michael Jackson name his denim store? Billy Jeans!</p>
+			<p id="joke"></p>
 		</div>
 		<div class="mdl-card__actions mdl-card--border rel-logo">
-			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="another">
 				Another Joke
 			</a>
 			<img src="joke.svg" height="20" class="card-logo">
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script>
-		$(function(){
+		function fetchJoke() {
+			$.getJSON("https://icanhazdadjoke.com/", function(data) {
+				var joke = data.joke;
+				$("#joke").text(joke);
+			});
+		}
 
+		$(function(){
+			fetchJoke();
+		});
+
+		$("#another").click(function(){
+			fetchJoke();
 		});
 		</script>
 	</body>
