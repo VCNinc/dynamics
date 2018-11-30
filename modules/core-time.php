@@ -30,7 +30,7 @@
 				font-size: 22px;
 			}
 			.mdl-card__supporting-text {
-				margin: auto;
+				margin: 0;
 			}
 		</style>
 		<div class="mdl-card__supporting-text">
