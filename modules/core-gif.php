@@ -26,15 +26,25 @@ $tag = isset($_GET['tag']) ? $_GET['tag'] : "meme";
 			.rel-logo {
 				position: relative;
 			}
+			.inline-title, .calendar h2 {
+				display: block;
+				line-height: 32px;
+				margin-bottom: 8px;
+				font-size: 24px;
+				font-weight: 300;
+				font-family: "Roboto", sans-serif;
+				color: rgba(0,0,0,0.87);
+				margin-top: 0;
+			}
 		</style>
 		<div class="mdl-card__title" style="padding: 0;">
-			<img src="" width="100%" id="gif">
+			<img src="gfycat.png" width="100%" id="gif">
 		</div>
 		<div class="mdl-card__actions mdl-card--border rel-logo">
 			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="another">
 				Another Gif
 			</a>
-			<img src="joke.svg" height="20" class="card-logo">
+			<img src="gif.png" height="20" class="card-logo">
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script>
