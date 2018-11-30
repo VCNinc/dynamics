@@ -53,7 +53,6 @@
 				$(".current-time").text(time);
 			}, 500);
 
-			$("#result-" + results).html(answer);
 			var time = moment.tz(timezone).format('hh:mm:ss A');
 			$("#result-" + results + " .current-time").text(time);
 			componentHandler.upgradeAllRegistered();
