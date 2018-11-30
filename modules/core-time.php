@@ -35,10 +35,29 @@
 		</style>
 		<div class="mdl-card__supporting-text">
 			<div class="timezone">
-				<h1 class="current-time">02:14:37 AM</h1>
-				<p class="current-time-zone">America/Chicago (UTC-6)</p>
+				<h1 class="current-time"></h1>
+				<p class="current-time-zone"></p>
 			</div>
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.13/moment-timezone-with-data.min.js"></script>
+		<script>
+		$(function(){
+			var timezone = moment.tz.guess();
+			var timezone_string = timezone + " (UTC" + ((moment().tz(timezone).utcOffset()/60) > 0 ? '+' : '') + (moment().tz(timezone).utcOffset()/60) + ")";
+			$(".current-time-zone").text(timezone_string);
 
+			setInterval(function(){
+				var time = moment.tz(timezone).format('h:mm:ss A');
+				$(".current-time").text(time);
+			}, 500);
+
+			$("#result-" + results).html(answer);
+			var time = moment.tz(timezone).format('hh:mm:ss A');
+			$("#result-" + results + " .current-time").text(time);
+			componentHandler.upgradeAllRegistered();
+		});
+		</script>
 	</body>
 </html>
