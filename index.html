@@ -29,6 +29,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script>
+    	$(function(){
+    		$("input").focus();
+    	});
+
     	$("input").on("keypress", function(e) {
 			var regex = new RegExp("^[^`]+$");
 			var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
