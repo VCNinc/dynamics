@@ -10,3 +10,9 @@
 - Created Dynamics PHP Framework
 - Created Dynamics MySQL Database
 - Created PHP Modules for Calendar, GIF, Time, and Joke
+
+### Week 3 Code Review (11/30)
+
+- Added Dynamics Core Music Module for Patrick
+- Setup Open Frameworks Web Framework
+- Created PHP-based Query Engine with JS Implementation
