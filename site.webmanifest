@@ -50,6 +50,5 @@
     ],
     "theme_color": "#3f51b5",
     "background_color": "#3f51b5",
-    "start_url": "localhost",
     "display": "standalone"
 }
