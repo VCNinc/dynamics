@@ -5,11 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dynamics</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.6.1/fullcalendar.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="index.css?v=5.0">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -28,23 +23,9 @@
     <meta name="theme-color" content="#3f51b5">
   </head>
   <body>
-    <div class="main-section">
-      <img src="logo.svg" class="logo">
-      <form action="" method="post" id="query-form">
-        <div id="search-bar">
-          <input class="form-control input" type="text" placeholder="Search for something..." id="query">
-          <i class="material-icons">search</i>
-        </div>
-      </form>
-      <p style="margin-top: 10px" id="intro-text">Try starting with "What is Dynamics?" &nbsp;&bull;&nbsp; Page updated <script>document.write(document.lastModified.substr(0, 10));</script>.</p>
-    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script>
-    	$(function(){
-    		$("input").focus();
-        window.resi
-      });
+      
     </script>
   </body>
 </html>
