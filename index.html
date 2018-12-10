@@ -148,7 +148,8 @@
         } else if (query.includes("edit")) {
           if(query.includes("markdown")) {
             return "dillinger";
-          } else if (query.includes("photo")) {
+          } else if (query.includes("photo")
+                  || query.includes("image")) {
             return "photo-editor";
           }
         } else if (query.includes("calculator")) {
