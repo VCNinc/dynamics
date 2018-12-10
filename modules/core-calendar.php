@@ -26,13 +26,8 @@
 				margin-top: 0;
 			}
 		</style>
-		<div class="mdl-card__supporting-text">
+		<div class="mdl-card__supporting-text" style="margin: 0 auto;">
 			<div class="calendar"></div>
-		</div>
-		<div class="mdl-card__actions mdl-card--border rel-logo">
-			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-				Log Out
-			</a>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>

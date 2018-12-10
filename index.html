@@ -106,6 +106,18 @@
             var popup = window.open("modules/core-time.php", "popup", "width=500, height=220, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
             popup.resizeTo(400, 220);
             popup.moveTo(0, 5000);
+          } else if (chosen_module == "dillinger") {
+            var popup = window.open("https://dillinger.io", "popup", "width=800, height=500, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
+            popup.resizeTo(800, 500);
+            popup.moveTo(0, 0);
+          } else if (chosen_module == "web2.0calc") {
+            var popup = window.open("https://web2.0calc.com/widgets/6cba047afca6", "popup", "width=590, height=590, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
+            popup.resizeTo(590, 590);
+            popup.moveTo(0, 0);
+          } else if (chosen_module == "core-calendar") {
+            var popup = window.open("modules/core-calendar.php", "popup", "width=800, height=700, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
+            popup.resizeTo(800, 700);
+            popup.moveTo(0, 5000);
           }
         });
     	});
@@ -129,6 +141,15 @@
         } else if (query.includes("time")
                 || query.includes("clock")) {
             return "core-time";
+        } else if (query.includes("editor")) {
+          if(query.includes("markdown")) {
+            return "dillinger";
+          }
+        } else if (query.includes("calculator")) {
+          return "web2.0calc";
+        } else if (query.includes("calendar")
+                || query.includes("schedule")) {
+          return "core-calendar";
         }
        }
     </script>
