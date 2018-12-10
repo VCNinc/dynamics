@@ -92,13 +92,18 @@
 
         var chosen_module = handleQuery(query);
 
-        if(chosen_module == "core-video-player") {
-          var popup = window.open("modules/core-video-player.php", "popup", "width=800, height=450, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
-          popup.resizeTo(800, 450);
-          popup.moveTo(0, 0);
-        }
 
-    		$("#search-progress").animate({width: '100%'});
+        $("#search-progress").animate({width: '100%'}, function(){
+          if(chosen_module == "core-video-player") {
+            var popup = window.open("modules/core-video-player.php", "popup", "width=695, height=449, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
+            popup.resizeTo(695, 449);
+            popup.moveTo(0, 0);
+          } else if (chosen_module == "core-time") {
+            var popup = window.open("modules/core-time.php", "popup", "width=500, height=220, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
+            popup.resizeTo(400, 220);
+            popup.moveTo(0, 5000);
+          }
+        });
     	});
 
       function handleQuery(query) {
@@ -112,8 +117,11 @@
           || query.includes("mp4")) {
             return "core-video-player";
           }
+        } else if (query.includes("time")
+                || query.includes("clock")) {
+            return "core-time";
         }
-      }
+       }
     </script>
   </body>
 </html>
