@@ -98,6 +98,10 @@
             var popup = window.open("modules/core-video-player.php", "popup", "width=695, height=449, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
             popup.resizeTo(695, 449);
             popup.moveTo(0, 0);
+          } else if(chosen_module == "core-audio-player") {
+            var popup = window.open("modules/core-audio-player.php", "popup", "width=695, height=449, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
+            popup.resizeTo(695, 449);
+            popup.moveTo(0, 0);
           } else if (chosen_module == "core-time") {
             var popup = window.open("modules/core-time.php", "popup", "width=500, height=220, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
             popup.resizeTo(400, 220);
@@ -116,6 +120,11 @@
           || query.includes("webm")
           || query.includes("mp4")) {
             return "core-video-player";
+          } else if (query.includes("audio")
+                  || query.includes("wav")
+                  || query.includes("mp3")
+                  || query.includes("flac")) {
+            return "core-audio-player";
           }
         } else if (query.includes("time")
                 || query.includes("clock")) {

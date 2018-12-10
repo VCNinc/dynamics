@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Video Player | Core Modules | Dynamics</title>
+		<title>Audio Player | Core Modules | Dynamics</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Roboto:300,400,500,700" rel="stylesheet">
 		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css">
@@ -77,25 +77,22 @@
 				z-index: -1;
 			}
 
-			#video {
+			#audio {
 				position: fixed;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				width: 100%;
-				height: 100%;
-				display: none;
+				top: 50%;
+				left: 50%;
+				width: 80%;
+				transform: translate(-50%, -50%);
 			}
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<div class="upload-area">
 			<div class="file-icon">
-				<img src="video-file.svg">
-				<p>Drop Video Here</p>
+				<img src="audio-file.svg">
+				<p>Drop Audio Here</p>
 			</div>
 		</div>
-		<video controls autoplay id="video"></video>
+		<audio controls autoplay id="audio" style="display: none;"></audio>
 		<div class="module-label core">Core</div>
 		<script>
 		$(function(){
@@ -109,14 +106,14 @@
 			}).on("drop", function(e){
 				var file = e.originalEvent.dataTransfer.files[0];
 				var type = file.type;
-				var video = document.getElementById('video');
+				var audio = document.getElementById('audio');
 
-				var compatibility = video.canPlayType(type);
+				var compatibility = audio.canPlayType(type);
 				if(!(compatibility === '' || compatibility === 'no')) {
 					var url = URL.createObjectURL(file);
-					video.src = url;
+					audio.src = url;
 					$(".upload-area").fadeOut();
-					$(video).fadeIn();
+					$(audio).fadeIn();
 				}
 
 				console.log(file);
