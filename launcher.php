@@ -25,8 +25,10 @@
   <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-      var popup = window.open("index.html", "popup", "width=610,height=310,scrollbars=no,resizable=no");
-      window.resizeTo(610, 310);
+      var popup = window.open("index.html", "popup", "width=610, height=360, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
+      popup.resizeTo(610, 360);
+      popup.moveTo(5000, 5000);
+      window.close();
     </script>
   </body>
 </html>
