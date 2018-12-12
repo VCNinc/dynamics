@@ -152,7 +152,11 @@
               popup.resizeTo(800, 700);
               popup.moveTo(0, 5000);
             } else if (chosen_module == "photo-editor") {
-              var popup = window.open("https://fengyuanchen.github.io/photo-editor/", "popup", "width=800, height=700, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
+              var popup = window.open("https://fengyuanchen.github.io/photo-editor/", "popup", "width=600, height=900, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
+              popup.resizeTo(600, 900);
+              popup.moveTo(5000, 0);
+            } else if (chosen_module == "core-pdf-viewer") {
+              var popup = window.open("modules/core-pdf-viewer.php", "popup", "width=600, height=900, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
               popup.resizeTo(600, 900);
               popup.moveTo(5000, 0);
             }
@@ -175,6 +179,8 @@
                   || query.includes("mp3")
                   || query.includes("flac")) {
             return "core-audio-player";
+          } else if (query.includes("pdf")) {
+            return "core-pdf-viewer";
           }
         } else if (query.includes("time")
                 || query.includes("clock")) {
