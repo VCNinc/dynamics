@@ -159,6 +159,10 @@
               var popup = window.open("modules/core-pdf-viewer.php", "popup", "width=600, height=900, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
               popup.resizeTo(600, 900);
               popup.moveTo(5000, 0);
+            } else if (chosen_module == "discord") {
+              var popup = window.open("https://discordapp.com/channels/@me/522632731075543063", "popup", "width=1200, height=600, directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=no");
+              popup.resizeTo(1200, 600);
+              popup.moveTo(100, 100);
             }
           });
         }
@@ -199,6 +203,8 @@
         } else if (query.includes("calendar")
                 || query.includes("schedule")) {
           return "core-calendar";
+        } else if (query.includes("chat")) {
+          return "discord";
         } else {
           return "no-match";
         }
